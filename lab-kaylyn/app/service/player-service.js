@@ -1,7 +1,7 @@
 'use strict';
 
-// const angular = require('angular');
-const ngAdventure = require('ngAdventure', []);
+const angular = require('angular');
+const ngAdventure = angular.module('ngAdventure');
 
 ngAdventure.factory('playerService', ['$q', '$log', 'mapService', playerService]);
 
@@ -18,12 +18,14 @@ function playerService($q, $log, mapService){
     healthPoints: 10,
   };
 
-  let history = service.history = {
-    turn,
-    desc: 'Welcome to The Game of Thrones...',
-    location: 'House Stark',
-    healthPoints: player.healthPoints,
-  };
+  let history = service.history = [
+    {
+      turn: 0,
+      desc: 'Welcome to The Game of Thrones...',
+      // location: 'House Stark',
+      healthPoints: player.healthPoints,
+    },
+  ];
 
   service.movePlayer = function(direction){
     return new $q((resolve, reject) => {
@@ -42,6 +44,7 @@ function playerService($q, $log, mapService){
       }
       history.unshift({
         turn,
+        location: player.location,
         desc: mapService.mapData[newLocation].desc,
         healthPoints: player.healthPoints,
       });
@@ -50,4 +53,5 @@ function playerService($q, $log, mapService){
       return resolve(player.location);
     });
   };
+  return service;
 }

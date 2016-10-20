@@ -10,49 +10,49 @@ function mapService($log){
   let service = {};
 
   service.mapData = {
-    HouseStark: {
+    'House Stark': {
       desc: 'You are in House Stark',
       north: null,
       south: 'House Lanister',
       east: null,
       west: null,
     },
-    HouseLanister: {
+    'House Lanister': {
       desc: 'You are in House Lanister',
-      north: 'House Stark',
-      south: 'House Arryn',
+      north: 'HouseStark',
+      south: 'HouseArryn',
       east: 'House Baratheon',
       west: null,
     },
-    HouseArryn: {
+    'House Arryn': {
       desc: 'You are in House Arryn',
       north: 'House Lanister',
       south: null,
       east: 'House Tyrell',
       west: null,
     },
-    HouseBaratheon: {
+    'House Baratheon': {
       desc: 'You are in House Baratheon',
       north: null,
       south: 'House Tyrell',
       east: null,
       west: 'House Lanister',
     },
-    HouseTyrell: {
+    'House Tyrell': {
       desc: 'You are in House Tyrell',
       north: 'House Baratheon',
       south: null,
       east: 'House Targaryen',
       west: 'House Arryn',
     },
-    HouseTargaryen: {
+    'House Targaryen': {
       desc: 'You are in House Targaryen',
       north: null,
       south: 'House Martell',
       east: null,
       west: 'House Tyrell',
     },
-    HouseMartell: {
+    'House Martell': {
       desc: 'You are in House Martell',
       north: 'House Targaryen',
       south: null,
