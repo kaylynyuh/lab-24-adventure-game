@@ -60,4 +60,5 @@ function mapService($log){
       west: null,
     },
   };
+  return service;
 }
