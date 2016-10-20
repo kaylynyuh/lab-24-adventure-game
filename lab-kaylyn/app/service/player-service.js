@@ -1,6 +1,6 @@
 'use strict';
 
-const angular = require('angular');
+// const angular = require('angular');
 const ngAdventure = require('ngAdventure', []);
 
 ngAdventure.factory('playerService', ['$q', '$log', 'mapService', playerService]);
