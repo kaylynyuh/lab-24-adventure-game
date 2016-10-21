@@ -10,51 +10,51 @@ function mapService($log){
   let service = {};
 
   service.mapData = {
-    'House Stark': {
-      desc: 'You are in House Stark, where Nymeria was last seen',
+    'Winterfell': {
+      desc: 'You are in Winterfell, House Stark, where Nymeria was last seen',
       north: null,
-      south: 'House Lanister',
+      south: 'Casterly Rock',
       east: null,
       west: null,
     },
-    'House Lanister': {
-      desc: 'You are in House Lanister',
-      north: 'HouseStark',
-      south: 'HouseArryn',
+    'Casterly Rock': {
+      desc: 'You are in Casterly Rock, House Lanister',
+      north: 'Winterfell',
+      south: 'Riverrun',
       east: 'House Baratheon',
       west: null,
     },
-    'House Arryn': {
-      desc: 'You are in House Arryn',
-      north: 'House Lanister',
+    'Riverrun': {
+      desc: 'You are in Riverrun, House Tully',
+      north: 'Casterly Rock',
       south: null,
-      east: 'House Tyrell',
+      east: 'Highgarden',
       west: null,
     },
-    'House Baratheon': {
-      desc: 'You are in House Baratheon',
+    'Dragonstone': {
+      desc: 'You are in Dragonstone, House Baratheon',
       north: null,
-      south: 'House Tyrell',
+      south: 'Highgarden',
       east: null,
-      west: 'House Lanister',
+      west: 'Casterly Rock',
     },
-    'House Tyrell': {
-      desc: 'You are in House Tyrell',
-      north: 'House Baratheon',
+    'Highgarden': {
+      desc: 'You are in Highgarden, House Tyrell',
+      north: 'Dragonstone',
       south: null,
-      east: 'House Targaryen',
-      west: 'House Arryn',
+      east: 'The Iron Islands',
+      west: 'Riverrun',
     },
-    'House Targaryen': {
-      desc: 'You are in House Targaryen',
+    'The Iron Islands': {
+      desc: 'You are at The Iron Islands, House Greyjoy',
       north: null,
-      south: 'House Martell',
+      south: 'Sunspear',
       east: null,
-      west: 'House Tyrell',
+      west: 'Highgarden',
     },
-    'House Martell': {
-      desc: 'You are in House Martell',
-      north: 'House Targaryen',
+    'Sunspear': {
+      desc: 'You are in Sunspear, House Martell',
+      north: 'The Iron Islands',
       south: null,
       east: null,
       west: null,

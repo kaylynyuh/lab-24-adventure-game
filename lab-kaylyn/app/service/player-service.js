@@ -14,7 +14,7 @@ function playerService($q, $log, mapService){
 
   let player = service.player = {
     name: 'Arya Stark',
-    location: 'House Stark',
+    location: 'Winterfell',
     healthPoints: 10,
   };
 
