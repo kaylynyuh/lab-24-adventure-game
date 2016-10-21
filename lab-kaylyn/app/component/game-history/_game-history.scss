@@ -1,0 +1,40 @@
+@import "theme";
+
+.game-history {
+  margin: 2%;
+
+  ol {
+    padding: 0px;
+    list-style: none;
+    letter-spacing: .075rem;
+    line-height: 2.5em;
+
+    li {
+      margin-top: 5%;
+      margin-bottom: 2%;
+      padding: 5px;
+      border-radius: 5px;
+      color: $app-white;
+      background-color: $app-2nd;
+
+      p {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.form-control {
+  margin-top: 3em;
+  margin-left: .5em;
+  width: 25%;
+  display: inline;
+}
+
+label {
+  font-size: 1.25em;
+}
+
+.btn-default {
+  margin-left: .5em;
+}

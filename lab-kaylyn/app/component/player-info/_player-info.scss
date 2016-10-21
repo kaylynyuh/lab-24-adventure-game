@@ -1,0 +1,14 @@
+@import "theme";
+
+.player-info {
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: $app-white;
+  border-radius: 10px;
+
+  p span {
+    color: $app-2nd;
+    font-weight: bold;
+  }
+}
