@@ -16,17 +16,23 @@ describe('testing gamePadCtrl', function(){
 
 describe('testing initial properties', () => {
   it('directions should equal north, south, east, and west', () => {
-    expect(this.gamePadCtrl.directions).toBe('north', 'south', 'east', 'west');
+    expect(Array.isArray(this.gamePadCtrl.directions)).toBe(true);
   });
-  it('moveDirection should be the first element in the array', () => {
-    expect(this.moveDirection).toEqual(this.directions[0]);
+
+  it('directions array should have a length of 4', () => {
+    expect(this.gamePadCtrl.directions.length).toEqual(4);
   });
+
+  it('should have a default direction north', () => {
+    expect(this.gamePadCtrl.moveDirection).toBe('north');
+  });
+
 });
 
 describe('testing #movePlayer()', () => {
-  it('should equal a location', () => {
-    let expectedResult;
-    let result;
-    expect(result).toEqual(expectedResult);
+  it('should return to the default', () => {
+    this.gamePadCtrl.movePlayer();
+    let expectedResult = this.gamePadCtrl.moveDirection;
+    expect(expectedResult).toBe('north');
   });
 });

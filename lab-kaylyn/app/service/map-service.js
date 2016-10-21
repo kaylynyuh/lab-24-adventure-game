@@ -11,7 +11,7 @@ function mapService($log){
 
   service.mapData = {
     'House Stark': {
-      desc: 'You are in House Stark',
+      desc: 'You are in House Stark, where Nymeria was last seen',
       north: null,
       south: 'House Lanister',
       east: null,
