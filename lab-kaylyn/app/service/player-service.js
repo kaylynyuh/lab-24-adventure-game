@@ -22,7 +22,6 @@ function playerService($q, $log, mapService){
     {
       turn,
       desc: 'It\'s nearing the end of the long summer and winter is coming. Help Arya find her Direwolf, Nymeria.',
-      // location: 'House Stark',
       healthPoints: player.healthPoints,
     },
   ];
@@ -37,7 +36,7 @@ function playerService($q, $log, mapService){
           turn,
           desc: 'It appears you have hit a wall',
           location: player.location,
-          healthPoints: player.healthPoints,
+          healthPoints: player.healthPoints -= 1,
         });
         console.log('history', history);
         return reject('There is no House in that direction');
