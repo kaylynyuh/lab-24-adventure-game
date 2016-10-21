@@ -15,7 +15,7 @@ function playerService($q, $log, mapService){
   let player = service.player = {
     name: 'Arya Stark',
     location: 'Winterfell',
-    healthPoints: 10,
+    healthPoints: 20,
   };
 
   let history = service.history = [
@@ -37,6 +37,7 @@ function playerService($q, $log, mapService){
           desc: 'It appears you have hit a wall',
           location: player.location,
           healthPoints: player.healthPoints -= 1,
+          healthWarning: null,
         });
         console.log('history', history);
         return reject('There is no House in that direction');
@@ -46,6 +47,7 @@ function playerService($q, $log, mapService){
         location: player.location,
         desc: mapService.mapData[newLocation].desc,
         healthPoints: player.healthPoints,
+        healthWarning: null,
       });
       console.log('history', history);
       player.location = newLocation;
