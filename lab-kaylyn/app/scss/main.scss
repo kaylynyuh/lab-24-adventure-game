@@ -1,6 +1,10 @@
 @import "_vendor";
 @import "_theme";
 
+html.ng-scope{
+  background: #222;
+}
+
 html, body {
   height: 100%;
   width: 75%;
@@ -9,5 +13,11 @@ html, body {
 
 h1 {
   text-align: center;
-  margin: 2em;
+  margin-top: 2em;
+  padding-top: 1.5em;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 2em;
 }
