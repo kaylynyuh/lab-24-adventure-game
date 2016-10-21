@@ -20,8 +20,8 @@ function playerService($q, $log, mapService){
 
   let history = service.history = [
     {
-      turn: 0,
-      desc: 'Welcome to The Game of Thrones...',
+      turn,
+      desc: 'Good luck on your journey through the 7 Kingdoms...',
       // location: 'House Stark',
       healthPoints: player.healthPoints,
     },
